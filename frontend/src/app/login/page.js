@@ -30,7 +30,7 @@ export default function Login() {
       credentials: "include",
     });
 
-    const data = await res.json();
+    const data = await res.json(); // recebe resp da request
 
     if (res.ok) {
       setMessage(data.message || "Login feito com sucesso. Redirecionando...");

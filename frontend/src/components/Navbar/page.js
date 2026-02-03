@@ -8,7 +8,7 @@ export default function Navbar() {
   async function handleLogout() {
     await fetch("http://localhost:8000/api/auth/logout", {
       method: "POST",
-      credentials: "include",
+      credentials: "include", // envia o cookie auth
     });
 
     router.push("/login");

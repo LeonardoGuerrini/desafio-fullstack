@@ -24,6 +24,5 @@ const userSchema = new Schema({
     
 })
 
-// Usa o model já existente se tiver, ou cria um novo se não tiver
 const User = mongoose.models.User || mongoose.model("User", userSchema)
 export default User

@@ -1,6 +1,5 @@
 import { registerAdmin, loginAdmin, logoutAdmin } from "../services/auth.service.js";
 
-// req e res são do Express
 export async function register(req, res) {
   try {
     const body = req.body;
@@ -27,6 +26,6 @@ export async function login(req, res) {
 
 export async function logout(req, res) {
   await logoutAdmin();
-  res.clearCookie("auth", { httpOnly: true, path: "/" });
+  res.clearCookie("auth", { httpOnly: true, path: "/" }); // apaga em todo site
   res.json({ ok: true });
 }

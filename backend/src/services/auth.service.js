@@ -18,7 +18,7 @@ export async function loginAdmin({ username, password }) {
   const match = await bcrypt.compare(password, admin.password);
   if (!match) throw new Error("Credenciais inválidas");
 
-  return { id: admin._id, username: admin.username };
+  return { id: admin._id, username: admin.username }; // retorna os dados necessários
 }
 
 export async function logoutAdmin() {

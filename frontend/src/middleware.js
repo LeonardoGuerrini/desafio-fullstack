@@ -1,3 +1,5 @@
+// protege alguma rota
+
 import { NextResponse } from "next/server";
 
 export function middleware(req) {
@@ -11,5 +13,5 @@ export function middleware(req) {
 }
 
 export const config = {
-  matcher: ["/home"],
+  matcher: ["/home"], // acho que esqueci da usuarios e produtos
 };

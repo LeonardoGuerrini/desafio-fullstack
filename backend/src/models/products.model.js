@@ -22,6 +22,5 @@ const productSchema = new Schema({
     
 })
 
-// Usa o model já existente se tiver, ou cria um novo se não tiver
 const Product = mongoose.models.Product || mongoose.model("Product", productSchema)
 export default Product

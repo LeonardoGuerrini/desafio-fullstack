@@ -1,3 +1,5 @@
+import "dotenv/config"
+
 import express from "express";
 import cors from "cors";
 import apiRoutes from "./api/index.js";
@@ -9,12 +11,11 @@ const PORT = 8000;
 
 app.use(cors({ 
     origin: "http://localhost:3000",
-    credentials: true
- })); // porta do frontend
+    credentials: true // permite envio de cookies
+})); // porta do frontend
 
 connectMongoDB();
 
-// middleware obrigatório para interpretar JSON do body
 app.use(express.json());  
 app.use("/api", apiRoutes);
 

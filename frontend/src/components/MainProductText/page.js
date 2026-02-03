@@ -47,7 +47,7 @@ export default function MainProductText(){
         });
 
         if (res.ok) {
-            setProducts(prev => prev.filter(product => product._id !== id));
+            setProducts(prev => prev.filter(product => product._id !== id)); // mantém apenas os produtos com id diferente do deletado
         }
     }
 
